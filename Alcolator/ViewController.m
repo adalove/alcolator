@@ -67,9 +67,9 @@
     CGFloat viewWidth = 320;
     CGFloat padding = 20;
     CGFloat itemWidth = viewWidth - padding - padding;
-    CGFloat itemHeight = 44;
+    CGFloat itemHeight = 30;
     
-    self.beerPercentTextField.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
+    self.beerPercentTextField.frame = CGRectMake(60, 60, itemWidth, itemHeight);
     CGFloat bottomOfTextField = CGRectGetMaxY(self.beerPercentTextField.frame);
     self.beerCountSlider.frame = CGRectMake(padding, bottomOfTextField + padding, itemWidth, itemHeight);
     CGFloat bottomOfSlider = CGRectGetMaxY(self.beerCountSlider.frame);
