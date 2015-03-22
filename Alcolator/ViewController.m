@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = NSLocalizedString(@"Wine", @"wine");
+    
     // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor orangeColor];
@@ -139,5 +141,7 @@
     CGFloat itemHeight = size.height;
 
 }
+
+
 
 @end
