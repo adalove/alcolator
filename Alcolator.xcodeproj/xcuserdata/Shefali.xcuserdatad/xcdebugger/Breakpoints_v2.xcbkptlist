@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alcolator/ViewController.m"
-            timestampString = "448677381.655363"
+            timestampString = "448820064.859585"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "-sliderValueDidChange:"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "-buttonPressed:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
