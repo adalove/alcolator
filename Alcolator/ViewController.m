@@ -20,14 +20,25 @@
 
 @implementation ViewController
 
+- (instancetype) init {
+    self = [super init];
+    
+    if (self) {
+        self.title = NSLocalizedString(@"Wine", @"wine");
+        [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
+    }
+    
+    return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.title = NSLocalizedString(@"Wine", @"wine");
+
     
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.beerPercentTextField.delegate = self;
     self.beerPercentTextField.placeholder = NSLocalizedString(@"% Alcohol Content Per Beer", @"Beer percent placeholder text");
     [self.beerCountSlider addTarget:self action:@selector(sliderValueDidChange:) forControlEvents:UIControlEventValueChanged];
@@ -39,6 +50,7 @@
     [self.calculateButton setTitle:NSLocalizedString(@"Calculate!", @"Calculate command") forState:UIControlStateNormal];
     [self.hideKeyboardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
     self.resultLabel.numberOfLines = 0;
+    self.view.backgroundColor = [UIColor colorWithRed:0.741 green:0.925 blue:0.714 alpha:1];
 }
 
 - (void)loadView {
@@ -98,8 +110,15 @@
     NSLog(@"Slider value changed to %f", sender.value);
     NSString * sliderValue = [NSString stringWithFormat:@"%f", self.slider.value];
     self.sliderLabel.text = sliderValue;
+    self.title = NSLocalizedString(@"Glasses of wine", @"wine");
     [self.beerPercentTextField resignFirstResponder];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
 }
+
+//- (void)tabBarController:(UITabBarController *)tabBarController
+// didSelectViewController:(UIViewController *)viewController{
+//    NSLog(@"the %@ controller has been selected");
+//}
 
 - (void)buttonPressed:(UIButton *)sender {
     [self.beerPercentTextField resignFirstResponder];
