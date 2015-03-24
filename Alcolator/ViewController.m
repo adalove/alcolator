@@ -109,7 +109,6 @@
 - (void)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     NSString * sliderValue = [NSString stringWithFormat:@"%f", self.slider.value];
-    self.sliderLabel.text = sliderValue;
     self.title = NSLocalizedString(@"Glasses of wine", @"wine");
     [self.beerPercentTextField resignFirstResponder];
     [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
