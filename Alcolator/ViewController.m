@@ -108,7 +108,7 @@
 
 - (void)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
-    NSString * sliderValue = [NSString stringWithFormat:@"%f", self.slider.value];
+//    NSString * sliderValue = [NSString stringWithFormat:@"%f", self.slider.value];
     self.title = NSLocalizedString(@"Glasses of wine", @"wine");
     [self.beerPercentTextField resignFirstResponder];
     [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
@@ -152,9 +152,8 @@
 
 - (void)viewWillTransitionToSize:(CGSize)size
        withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
-    CGFloat viewWidth = size.width;
-    CGFloat itemHeight = size.height;
 
+    
 }
 
 
